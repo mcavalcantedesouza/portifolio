@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Landing Page</title>
+</head>
+<body>
+    <header id="home">
+            <h1>Universe</h1>
+            <nav>
+                <a href="#home" class="link">Home</a>
+                <a href="#sobre" class="link">Sobre</a>
+                <a href="#contate-me" class="link">Contate Me</a>
+            </nav>
+    </header>
+    <main>
+        <section>
+            <div>
+                <h3>Bem Vindo a um Novo Universo</h3>
+                <h2>Diferentes mundos para diferentes pessoas</h2>
+                <p>m
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod error veniam in voluptatem magni quisquam
+                </p>
+                <button>Explore</button>
+            </div>
+            <div>
+                <img src="assets/imagens/astronauta.svg" alt="astronauta">
+            </div>
+        </section>
+        <section id="sobre">
+            <div>
+              <img src="assets/imagens/usuario.jpeg" alt="perfil do usuario">  
+            </div>
+            <div>
+                <h2>Quem sou eu?</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, a aut. Rem deserunt sed molestias explicabo, quo corporis mollitia sit dignissimos vero a similique esse alias molestiae vitae eveniet quisquam.</p>
+                <div class="redes-sociais">
+                    <button>Github</button>
+                    <div id="followers-count">
+                    </div>
+                    <div id="repositories-list">
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contate-me">
+            <div class="contate-me">
+                <h2>Me Contate</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Commodi similique esse fuga necessitatibus,
+                    iusto alias eius perferendis qui iste minima
+                    blanditiis repellendus distinctio dolor obcaecati
+                    aliquid quod quidem incidunt quibusdam!
+                </p>
+                <div id="redes">
+                    <a href="https://www.linkedin.com/in/dev-cavalcante/" target="_blank"><img class="redes" src="assets/imagens/linkedin.svg" alt="Meu LinkedIn"></a>
+                    <a href="https://github.com/mcavalcantedesouza" target="_blank"><img class="redes" src="assets/imagens/github.svg" alt="Meu GitHub"></a>
+                    <a href="https://www.instagram.com/_michel.cavalcante/" target="_blank"><img class="redes" src="assets/imagens/instagram.svg" alt="Meu Instagram"></a>
+                </div>
+            </div>
+            <div>
+                <form action="#">
+                    <label for="fnome">Nome:</label>
+                    <input id="fnome" type="text">
+                    <label for="femail">Email:</label>
+                    <input id="fnome" type="email">
+                    <label for="fassunto">Assunto:</label>
+                    <input id="fassunto" type="text">
+                    <label for="fmensagem">Mensagem:</label>
+                    <textarea id="fmensagem" rows="2"></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Feito por Michel Cavalcante - 2024</p>
+    </footer>
+
+    <script>
+        const username = 'mcavalcantedesouza';
+
+        fetch(`https://api.github.com/users/${username}`)
+        .then(response => response.json())
+        .then(user => {
+            const followersCount = user.followers;
+            const repositoriesCount = user.public_repos;
+
+            const followersCountElement = document.getElementById('followers-count');
+            const repositoriesCountElement = document.getElementById('repositories-count');
+
+            followersCountElement.textContent = `Número de seguidores: ${followersCount}`;
+            repositoriesCountElement.textContent = `Número de repositórios: ${repositoriesCount}`;
+        })
+        .catch(error => console.error('Erro ao recuperar informações:', error));
+    </script>
+</body>
+</html>
