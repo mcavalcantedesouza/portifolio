@@ -45,9 +45,8 @@ nav {
 }
 
 main {
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 100px 20% 0px 20%;
+display: flex;
+flex-direction: column;
 }
 
 footer {
@@ -56,17 +55,96 @@ footer {
     justify-content: center;
 }
 
-section {
+/* section {
     display: flex;
     flex-direction: row;
     align-items: center;
     align-content: center;
-    gap: 30px;
+    gap: 50px;
     text-align: center;
-    margin: 30px 0;
-    height: 500px;
+    justify-content: center;
+    width: 50vw;
+    background-color: red;
+} */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+.introducao {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 50px 16px;
+    margin: 30px 0;
+    justify-content: center;
+}
+
+.introducao > div {
+    width: 500px;
+}
+
+.introducao-conteudo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px
+}
+
+.introducao-conteudo > h2 {
+    font-size: 2.5em;
+}
+
+.introducao-conteudo > h3 {
+    font-size: 1.1em;
+}
+
+.introducao-conteudo > p {
+    text-align: center;
+}
+
+.introducao-conteudo > button {
+    width: 200px;
+}
+
+.sobre {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+    padding: 0 300px;
+
+}
+
+.conteudo-sobre {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 600px;
+    gap: 30px;
+}
+
+.conteudo-sobre > h2 {
+    font-size: 2.5em;
+}
+
+.conteudo-sobre > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sobre > div > img {
+    height: 350px;
+    border-radius: 50%;
+    border: 4px solid var(--roxo-claro);
+}
 
 
 h1,h2,h3 {
@@ -86,6 +164,13 @@ form > button {
     align-self: center;
 }
 
+input, textarea {
+    border-radius: 15px;
+    margin-bottom: 10px;
+    width: 300px;
+    border-style: none;
+}
+
 button {
     background-color: var(--roxo-claro);
     height: 40px;
@@ -95,6 +180,7 @@ button {
     align-items: center;
     color: var(--branco);
     font-size: 0.85em;
+    border-style: none;
 }
 
 
@@ -114,6 +200,10 @@ button {
     height: auto;
 }
 
+.redes-sociais > button{
+    width: 100px;
+}
+
 .link {
     text-decoration: none;
     color: white;
@@ -128,17 +218,19 @@ button {
     text-align:left;
 }
 
-.contate-me > * {
+.contate-me {
     margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 100px 0;
 }
 
-img {
-    height: 300px;
-    width: 300px;
+.contato-conteudo {
+    width: 600px;
 }
 
-input, textarea {
-    border-radius: 15px;
-    margin-bottom: 10px;
-    width: 300px;
-}
+
+
+
+
