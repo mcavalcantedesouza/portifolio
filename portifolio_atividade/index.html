@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Landing Page</title>
 </head>
 <body>
@@ -35,17 +34,17 @@
         </section>
         <section id="sobre" class="sobre">
             <div>
-              <img src="https://avatars.githubusercontent.com/u/149630140?s=400&u=3e923e735d9ae0347e441f60c9df782b473be20a&v=4" alt="perfil do usuario">  
+              <img id="perfil-usuario" src="https://i.imgur.com/Sk5SjWE.jpg" alt="perfil do usuario">  
             </div>
             <div class="conteudo-sobre">
                 <h2>Quem sou eu?</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, a aut. Rem deserunt sed molestias explicabo, quo corporis mollitia sit dignissimos vero a similique esse alias molestiae vitae eveniet quisquam.</p>
                 <div class="redes-sociais">
-                    <button>Github</button>
-                    <div id="followers-count">
+                    <button id="btn-github" onclick="gitHub()">Github</button>
+                    <div id="seguidores">
                         seguidores
                     </div>
-                    <div id="repositories-count">
+                    <div id="repositorios">
                         repositorios
                     </div>
 
@@ -72,11 +71,11 @@
             <div class="formulario">
                 <form action="#">
                     <label for="fnome">Nome:</label>
-                    <input id="fnome" type="text">
+                    <input id="fnome" type="text" required>
                     <label for="femail">Email:</label>
-                    <input id="fnome" type="email">
+                    <input id="fnome" type="email" required>
                     <label for="fassunto">Assunto:</label>
-                    <input id="fassunto" type="text">
+                    <input id="fassunto" type="text" required>
                     <label for="fmensagem">Mensagem:</label>
                     <textarea id="fmensagem" rows="2"></textarea>
                     <button type="submit">Enviar</button>
@@ -89,5 +88,6 @@
     <footer>
         <p>Feito por Michel Cavalcante - 2024</p>
     </footer>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>

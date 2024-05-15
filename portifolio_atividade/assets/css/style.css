@@ -28,7 +28,6 @@ header, footer {
     height: 60px;
     color: var(--branco);
     align-items: center;
-    position: fixed;
     padding: 10px 10%;
     font-weight:bold ;
 }
@@ -37,6 +36,7 @@ header {
     justify-content: space-between;
     background-color: var(--roxo-escuro);
     top: 0;
+    position: fixed;
 }
 
 nav {
@@ -125,7 +125,7 @@ footer {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 600px;
+    width: 580px;
     gap: 30px;
     align-items: center;
     justify-items: center;
